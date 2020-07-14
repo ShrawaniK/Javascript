@@ -1,0 +1,27 @@
+/*Write a Javascript program to display the current day and time in the following format.
+Today is : Monday
+Current Time is: 23 8 50 PM */
+
+
+
+<html>
+    <head>
+        <title>To display day and time</title>
+    </head>
+    <body>
+        <script>
+        document.write("<br>");
+        document.write("<br>");
+        var date=new Date();
+        var day=date.getDay();
+        var weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        document.write("Today is : "+weekday[day]);
+        var hour=date.getHours();
+        var minute=date.getMinutes();
+        var seconds=date.getSeconds();
+        var ampm=(hour > 12)?"PM" : "AM";
+        document.write("<br>");
+        document.write("Current Time is: "+hour+" "+minute+" "+seconds+" "+ampm);
+        </script>
+    </body>
+</html>
