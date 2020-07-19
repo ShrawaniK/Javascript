@@ -1,0 +1,43 @@
+/*Question 5:
+You are managing a sales department for your company, you want to reward your employees based on
+the sales made by them during the year.
+The criteria is as follows:
+1. Sales from 0-5000 : 2%
+2. Sales from 5001 - 10000 : 5%
+3. Sales from 10001 - 20000 : 7%
+4. Above 20000 - 10%
+Then log the total commission earned by him.
+*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var sales=prompt("Enter Sales");
+        if(sales>0 && sales<=5000)
+        {
+            a=sales*2/100;
+            console.log("Total Commission Earned by Employee is: "+a);
+        }
+        if(sales>5000 && sales<=10000)
+        {
+            b=sales*5/100;
+            console.log("Total Commission Earned by Employee is: "+b);
+        }
+        if(sales>10000 && sales<=20000)
+        {
+            c=sales*7/100;
+            console.log("Total Commission Earned by Employee is: "+c);
+        }
+        if(sales>20000)
+        {
+            d=sales*10/100;
+            console.log("Total Commission Earned by Employee is: "+d);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/*Question 8:
+Replace Function Expressions with arrow functions in the code below:
+function ask(question,yes,no)
+{
+    if(confirm(question))yes()
+    else no();
+}
+ask("Do you agree?",
+function(){alert("You Agreed");},
+function(){alert("You cancelled the Execution");});
+*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Use of Arrow Function");
+        let ask = (question,yes,no) =>{ if(confirm(question)) yes(); else no(); }
+    ask("Do you agree?",
+    yes=()=>alert("You Agreed"),
+    no=()=>alert("You cancelled the Execution"));
+    </script>
+    
+</body>
+</html>
