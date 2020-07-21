@@ -1,0 +1,88 @@
+<!--Question 2:
+Create a Class User with properties as name, age & email.
+He can login and logout
+Create another class Moderator which has all the features of User, plus additional functionality to Add
+coins and remove coins.
+Create one more class Admin which has all the features of Moderator plus additional features like add a
+Course and delete a particular course for a user. -->
+<!doctype html>
+<html>
+  <head> 
+  </head>
+  <body> 
+   <script>
+        class User
+        {
+            constructor(name,age,email)
+            {
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.courses=[];
+            }
+            login()
+            {
+                console.log(this.name+" has logged in succesfully");
+                return this;
+            }
+            logout()
+            {
+                console.log(this.name+" has logged out succesfully");
+                return this;
+            }
+        }
+        var coins=0;
+        class Moderator extends User
+        {
+         
+            addcoins()
+            {
+                coins++;
+                console.log(this.name+" has succesfully added "+this.coins+" coins");
+                  return this;
+            }
+            
+            removecoins()
+            {
+                coins--;
+                console.log(this.name+" has succesfully removed "+this.coins+" coins");
+                return this;
+            }
+        }
+        class Admin extends Moderator
+        {
+            addcourse(user,course)
+            {
+                user.courses.push(course);
+                console.log(user);
+            }
+            deletecourse(user,course)
+            {
+                user.courses.pop(course);
+                console.log(user);
+            }
+        }
+        let user1=new User("A",20,"a@gmail.com");
+        let user2=new User("B",23,"b@gmail.com");
+        let user3=new User("C",20,"c@gmail.com");
+        user1.login().logout();
+        user2.login();
+        user3.login();
+        let moderator=new Moderator("D",24,"d@gmail.com");
+        let admin=new Admin("E",22,"e@gmail.com");
+        let users=[user1,user2,moderator,admin];
+           users.forEach(element => {
+               console.log(element);
+                });
+                admin.addcourse(user1,"javascript");
+                admin.addcourse(user2,"python");
+                admin.addcourse(user3,"java");
+                admin.addcourse(user1,"python");
+                admin.deletecourse(user1,"javascript");
+        user3.logout();
+        user2.logout();
+
+    </script> 
+ 
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!--Question 1:
+Write a program which does the following things:
+1. Takes a positive number from the user.
+2. Makes an array of numbers till the number given by user
+3. Use higher order function to filter the odd numbers
+4. Generate and array of the cubes of the filtered numbers -->
+<!doctype html>
+<html lang="en">
+  <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ </head> 
+ <body> 
+  <script>
+      let no;
+      do
+      {
+        no=prompt("Enter Any Positive No.");
+      }while(no%2!=0 && no);
+      let arr=[];
+//to create an array till the number given
+for(let i=1;i<=no;i++)
+{
+    arr.push(i);
+}
+console.log(arr);
+//use higher order function to filter the odd nos.
+let oddsort=arr.filter(el=>el%2!=0);
+console.log("After filtering",oddsort);
+//array of cubes of the filtered nos.
+//let cube=sort.map((no)=>no*no*no);
+let oddCube=arr.filter(el=>el%2!=0).map(el=>el**3);
+console.log("After cubing",oddCube);  
+  </script> 
+ 
+</body>
+</html>
