@@ -1,2 +1,2 @@
 # Javascript
-This repository contain Lets Upgrade Javascript Assignments and Mini Project.
+This repository contains Lets Upgrade Javascript Assignments and Mini Project.
